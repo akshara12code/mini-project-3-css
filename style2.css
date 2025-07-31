@@ -1,0 +1,139 @@
+* {
+    background: rgb(21, 19, 27);
+    color: white;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.name {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    top: 80px;
+    padding-inline: 16px;
+}
+
+h1 {
+    font-size: 90px;
+    max-width: 499px;
+    font-family: "PT Sans", serif;
+    font-weight: 1000;
+}
+
+.blue { color: #4286F5; }
+.red { color: #EA4235; }
+.yellow { color: #FABC06; }
+.green { color: #34A853; }
+
+.search-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.searchbar {
+    height: 20px;
+    width: 607px;
+    border: 2px solid white;
+    border-radius: 40px;
+    padding: 15px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.searchbar:hover,
+.searchbar:focus-within {
+    background-color: #303134;
+    border-color: #303134;
+    box-shadow: 0px 0px 4px 2px #1f2022;
+    /* border: 2px solid  rgba(255, 255, 255, 0.46); */
+}
+
+.searchbar:focus-within {
+    border-radius: 24px 24px 0 0;
+}
+
+input {
+    border: none;
+    color: white;
+    height: 25px;
+    width: 100%;
+    margin-inline: 20px;
+    background: none;
+    outline: none;
+}
+
+.search-icon, .close-icon {
+    width: 25px;
+}
+
+.close-icon {
+    display: none;
+}
+
+.searchbar:focus-within .close-icon {
+    display: flex;
+}
+
+.menu {
+    display: none;
+    /*Initiallyhidden*/width: 607px;
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.searchbar:focus-within + .menu {
+    display: block; /* Show when searchbar is focused */
+}
+
+.suggestions {
+    border-radius: 0 0 13px 13px;
+    background: #303134;
+    padding: 8px 0;
+    /* border: 2px solid rgba(255, 255, 255, 0.46); */
+    width: 640px;
+    position: absolute;
+    left: -3%;
+  }
+
+.suggestions p {
+    margin: 0;
+    padding: 8px 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #303134;
+}
+
+.suggestions p:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+span {
+    color: white;
+    
+        background-color:#303134;
+      
+}
+
+.doodle-shapes {
+    position: fixed;
+    right: 32px;
+    bottom: 0;
+}
